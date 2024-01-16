@@ -1,15 +1,51 @@
 <!-- Portfolio Grid Section -->
+<style>
+.image-title-container {
+    position: relative;
+    text-align: center; /* Centering title */
+}
+
+.portfolio-title {
+    color: white; /* Text color */
+    font-size: 1em; /* Text size */
+    position: absolute; /* Positioning relative to image */
+    bottom: 10%; /* Position at the bottom of the image */
+    left: 0; /* Align to the left side */
+    width: 100%; /* Full width to match the image */
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    padding: 5px 0; /* Padding for the text */
+    box-sizing: border-box; /* Ensures padding is included in width */
+    word-wrap: break-word; /* Forces text to wrap and not overflow */
+}
+
+.portfolio-cell img {
+    display: block; /* Ensures no extra space below the image */
+    width: 100%; /* Adjust as necessary */
+    height: auto; /* Maintain aspect ratio */
+}
+
+
+
+</style>
+
+<!-- Portfolio Grid Section -->
 <div class="portfolio-grid">
     {% for item in site.portfolio %}
     <div class="portfolio-cell">
         <a class="portfolio-link" data-keyboard="true" href="{{ item.url | relative_url }}">
-            <div class="caption" title="{{ item.title }}">
-                <div class="caption-content">
-                    <i class="fas fa-search-plus fa-3x"></i>
-                </div>
+            <!-- Image and Title Container -->
+            <div class="image-title-container">
+                <img alt="{{ item.title }}" class="" src="{{ item.img | relative_url }}">
+                <!-- Project Title -->
+                <div class="portfolio-title">{{ item.title }}</div>
             </div>
-            <img alt="" class="" src="{{ item.img | relative_url }}">
         </a>
     </div>
     {% endfor %}
 </div>
+
+
+
+
+
+

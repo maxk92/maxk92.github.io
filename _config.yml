@@ -18,7 +18,7 @@ favicon: assets/favicon.ico                             # Icon displayed in the 
 
 # Header and footer text
 header_text: "BRINGING DATA TO LIFE"
-header_feature_image: assets/img/header/triangular.jpeg
+header_feature_image: assets/img/header/pitch.png
 header_feature_image_responsive: true
 footer_text: >
   Max Klemp's personal website
@@ -52,6 +52,12 @@ paginate_path: "/blog/page:num"
 # PORTFOLIO
 collections:
   portfolio:
+    output: true
+    permalink: /:collection/:name
+  publications:
+    output: true
+    permalink: /:collection/:name
+  publications_bookchapters:
     output: true
     permalink: /:collection/:name
 

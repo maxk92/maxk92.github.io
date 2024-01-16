@@ -1,0 +1,77 @@
+---
+layout: default
+---
+
+<style>
+.publication-center {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: [desired-width]; /* e.g., 800px, 100%, etc. */
+}
+
+.publication-center img {
+  max-width: 60%;
+  height: auto;
+}
+
+.publication-authors {
+  font-weight: bold;
+}
+
+.publication-info {
+  font-style: italic;
+}
+
+</style>
+
+
+<article {% if page.feature-img %}class="feature-image"{% endif %}>
+  <!-- Header and other parts of the article -->
+
+  <section class="post-content">
+    {% if page.bootstrap %}
+    <div class="bootstrap-iso">
+    {% endif %}
+
+    <div class="publication-center">
+      <h1 class="mt-4 publication-title">{{ page.title }}</h1>
+      <div class="publication-authors">{{ page.authors }}</div>
+      <div class="publication-info">{{ page.publication }}, {{ page.year}}</div>
+      <br>
+      <div class="publication-teaser">
+        <img src="../assets/img/pub-images/{{ page.slug }}_small.png" alt="project teaser"/>
+      </div>
+      {{ content }}
+      <h2 id="downloads">Downloads</h2>
+      <p>
+          <a href="../assets/download/{{ page.slug }}.pdf"><i class="far fa-file-pdf"></i> PDF</a>&nbsp;&nbsp; {% if page.slides %}
+    <a href="../assets/download/{{ page.slug }}_slides.pdf"
+      ><i class="far fa-file-pdf"></i> Slides</a
+    >&nbsp;&nbsp; {% endif %}
+    <a href="../assets/download/{{ page.slug }}.bib"
+      ><i class="far fa-file-alt"></i> BibTex</a
+    >&nbsp;&nbsp; {% if page.doi %}
+    <a href="{{ page.doi }}"><i class="fas fa-external-link-alt"></i> DOI</a
+    >&nbsp;&nbsp; {% endif %}
+  </p>
+    </div>
+
+    {% if page.bootstrap %}
+    </div>
+    {% endif %}
+  </section>
+
+  <!-- Tag list for portfolio -->
+  {% capture tag_list %}{{ page.tags | join: "|"}}{% endcapture %}
+  {% include default/tags_list.liquid tags=tag_list %}
+  
+</article>
+
+
+
+
+
+
+
+
+

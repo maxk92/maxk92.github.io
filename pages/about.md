@@ -9,11 +9,13 @@ tags: [Page]
 
 ## Welcome to My Profile
 
-Hello and thank you for visiting my page! I'm **Max Klemp**, and I've recently completed an exciting journey in the world of Sports Analytics with my PhD from the German Sport University Cologne. My passion lies at the crossroads of sports science and data analysis, a field where every discovery and insight can lead to enhancing athletic performance and training methodologies.
+Hello and thank you for visiting my page! I'm **Max Klemp**, and I've recently completed an exciting journey in the world of Sports Analytics with my PhD from the German Sport University Cologne. My passion lies at the crossroads of exercise science and data analysis, trying to generate data-driven insights into health, training methodologies and, as a personal area of interest, into the mathematical laws behind the beautiful game, football.
 
 ### A Bit About My Academic and Professional Journey
 
-My academic path began with a Bachelor's in Sport and Performance, followed by a Master's in Exercise Science & Coaching, both from the German Sport University Cologne. These programs weren't just about books and lectures; they were about getting out there, getting my hands dirty, and learning how things work in the real world of sports. This hands-on approach took me through internships at professional football clubs in Germany, where I gained invaluable experience in strength and conditioning, rehabilitation, and training monitoring.
+My academic path began with a Bachelor's in Sport and Performance, followed by a Master's in Exercise Science & Coaching, both from the German Sport University Cologne. 
+
+These programs weren't just about books and lectures; they were about getting out there, getting my hands dirty, and learning how things work in the real world of sports. This hands-on approach took me through internships at professional football clubs in Germany, where I gained invaluable experience in strength and conditioning, rehabilitation, and training monitoring.
 
 But it was during my PhD that I truly found my calling. Focusing on performance indicators in football, I delved into the intricate world of physical indicators and spatiotemporal data. Working with data from the German Bundesliga and using advanced tools like KINEXON and Catapult, I explored the challenges and potential solutions for handling heterogeneous data sources.
 
