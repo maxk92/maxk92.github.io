@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: publication_bookchapter
 title: Physical KPIs
 authors: Maximilian Klemp
 publication: "Memmert, D.: Match Analysis"
@@ -7,3 +7,4 @@ year: 2021
 doi: https://doi.org/10.4324/9781003160953-30
 ---
 
+This chapter discusses the analysis and importance of parameters which reflect the physical efforts of players and are mostly extracted from positional data. It reveals the history of time-motion data analysis, from early video-based approaches to the advent of spatiotemporal tracking data. Then, different applications of physical data are reviewed, from the early efforts to quantify training and match load, covering the estimation of energy expenditure, finishing with potential future usage of physical KPIs for performance analysis. In this chapter, the major raw data type used for physical analysis, positional data, is pictured as well as the different data acquisition methods for positional data (GPS, LPS/telemetry, computer vision from video data) with their advantages and drawbacks. Finally, the different parameters that can be obtained and analyzed are discussed, starting with simple metrics like distance covered and leading up to their extensions like the integrated approach or the metabolic power approach. Additionally, guidelines as well as important premises for the analysis of physical data in the applied setting as well as in research are outlined.
