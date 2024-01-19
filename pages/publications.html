@@ -15,8 +15,13 @@ title: Publications
   font-weight: bold;
 }
 
-.pubauthors,
+.pubauthors {
+  font-size: 75%;
+  margin-bottom: 0.75em;
+}
+
 .pubinfo {
+  font-style: italic;
   font-size: 75%;
   margin-bottom: 0.75em;
 }
@@ -35,6 +40,19 @@ title: Publications
   border: 1px solid black;
 }
 
+.pubteaser_book {
+  clear: both;
+}
+
+.pubteaser_book a {
+  float: left;
+  margin-right: 2em;
+}
+
+.pubteaser_book img {
+  width: 100px;
+  border: none
+}
 .publinks {
   font-size: 75%;
 }
@@ -68,10 +86,10 @@ title: Publications
 {% assign publications_bookchapters = site.publications_bookchapters | sort: "year" | reverse %}
 {% for pub in publications_bookchapters %}
 <div class="pubitem">
-  <div class="pubteaser">
+  <div class="pubteaser_book">
   <a href="{{pub.url}}">
     <img
-      src="../assets/img/pub-images/{{ pub.slug }}_small.png"
+      src="../assets/img/pub-images/{{ pub.slug }}.png"
       alt="{{pub.slug}} publication teaser"
     />
   </a>

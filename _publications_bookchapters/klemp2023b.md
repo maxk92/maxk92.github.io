@@ -2,7 +2,7 @@
 layout: publication_bookchapter
 title: Python
 authors: Maximilian Klemp
-publication: "Memmert, D.: Sportinformatik"
+publication: "In Memmert, D.: Sportinformatik"
 year: 2023
 doi: https://doi.org/10.1007/978-3-662-67026-2_15
 ---

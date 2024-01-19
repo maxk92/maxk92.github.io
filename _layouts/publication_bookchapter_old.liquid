@@ -33,30 +33,24 @@ layout: default
     <div class="bootstrap-iso">
     {% endif %}
 
-     <div class="publication-center">
+    <div class="publication-center">
       <h1 class="mt-4 publication-title">{{ page.title }}</h1>
       <div class="publication-authors">{{ page.authors }}</div>
       <div class="publication-info">{{ page.publication }}, {{ page.year}}</div>
       <br>
-      
-      <div style="display: flex; align-items: center;">
-        <div class="publication-teaser" style="flex: 2; display: flex; justify-content: center; margin: -150px;">
-            <img src="../assets/img/pub-images/{{ page.slug }}.png" alt="project teaser" style="width: auto; height: 100%;"/>
-        </div>
-        <div style="flex: 3; text-align:justify;">
-          <h2 id="abstract">Abstract</h2>
-          {{ content }}
-        </div>
+      <div class="publication-teaser">
+        <img src="../assets/img/pub-images/{{ page.slug }}.png" alt="project teaser"/>
       </div>
-
+      <h2 id="abstract">Abstract</h2>
+      {{ content }}
       <h2 id="downloads">Downloads</h2>
       <p>
-        <a href="../assets/download/{{ page.slug }}.bib"
-          ><i class="far fa-file-alt"></i> BibTex</a
-        >&nbsp;&nbsp; {% if page.doi %}
-        <a href="{{ page.doi }}"><i class="fas fa-external-link-alt"></i> DOI</a
-        >&nbsp;&nbsp; {% endif %}
-      </p>
+    <a href="../assets/download/{{ page.slug }}.bib"
+      ><i class="far fa-file-alt"></i> BibTex</a
+    >&nbsp;&nbsp; {% if page.doi %}
+    <a href="{{ page.doi }}"><i class="fas fa-external-link-alt"></i> DOI</a
+    >&nbsp;&nbsp; {% endif %}
+  </p>
     </div>
 
     {% if page.bootstrap %}
