@@ -6,6 +6,7 @@ permalink: /gallery/
 gallery_path: "assets/img/pexels"
 position: 3
 tags: [Page]
+hide: true
 ---
 
 This is a photo gallery made from the static files in the `assets/img/pexels` folder. 

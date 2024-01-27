@@ -1,12 +1,13 @@
 ---
 layout: post
-title: Cluster Analysis for Goals in the German Bundesliga
-feature-img: "assets/img/portfolio/terminator_closeup.png"
-img: "assets/img/portfolio/terminator_closeup.png"
-date: 27 September 2015
-tags: [Lorem, Ipsum]
+title: Clustering Athletes using Metabolomics
+feature-img: "assets/img/portfolio/terminator_pitch.png"
+img: "assets/img/portfolio/terminator_pitch.png"
+date: 10 January 2024
+tags: [omics, metabolomics, PCA, clustering]
 ---
 
-<!--#   ![image]({{ page.img | relative_url }}) -->
+{% include alerts/danger.html content="**Work in Progress**<br/>This notebook is currently being revised. An update will be available soon." %}
 
-{% include Cluster_Analysis_Goals.html %}
+
+{% include empty_nb.html %}

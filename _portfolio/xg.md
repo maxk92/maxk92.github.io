@@ -1,12 +1,13 @@
 ---
 layout: post
-title: Cluster Analysis for Goals in the German Bundesliga
-feature-img: "assets/img/portfolio/xg1.png"
-img: "assets/img/portfolio/xg1.png"
-date: 27 September 2015
-tags: [Lorem, Ipsum]
+title: Analyzing Over- and Underperformance based on xG
+feature-img: "assets/img/portfolio/xg.png"
+img: "assets/img/portfolio/xg.png"
+date: 30 September 2023
+tags: [Machine Learning, xG]
 ---
 
-<!--#   ![image]({{ page.img | relative_url }}) -->
+{% include alerts/danger.html content="**Work in Progress**<br/>This notebook is currently being revised. An update will be available soon." %}
 
-{% include Cluster_Analysis_Goals.html %}
+
+{% include empty_nb.html %}

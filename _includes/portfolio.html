@@ -24,11 +24,35 @@
     height: auto; /* Maintain aspect ratio */
 }
 
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 20px;
+    padding: 20px;
+}
 
 
 </style>
 
-<!-- Portfolio Grid Section -->
+
+
+<!-- Portfolio Grid Section 
+<div class="portfolio-grid">
+    {% for item in site.portfolio %}
+    <div class="portfolio-cell"> 
+        <a class="portfolio-link" data-keyboard="true" href="{{ item.url | relative_url }}">
+             Image and Title Container 
+            <div class="image-title-container">
+                <img alt="{{ item.title }}" class="" src="{{ item.img | relative_url }}">
+                 Project Title 
+                <div class="portfolio-title">{{ item.title }}</div>
+            </div>
+        </a>
+    </div>
+    {% endfor %}
+</div>  -->
+
+
 <div class="portfolio-grid">
     {% for item in site.portfolio %}
     <div class="portfolio-cell">
@@ -43,9 +67,6 @@
     </div>
     {% endfor %}
 </div>
-
-
-
 
 
 

@@ -1,12 +1,13 @@
 ---
 layout: post
-title: Cluster Analysis for Goals in the German Bundesliga
-feature-img: "assets/img/portfolio/birdseye_pitch.png"
-img: "assets/img/portfolio/birdseye_pitch.png"
-date: 27 September 2015
-tags: [Lorem, Ipsum]
+title: Assessing Creativity using Latent Semantic Analysis
+feature-img: "assets/img/portfolio/terminator_pitch.png"
+img: "assets/img/portfolio/terminator_pitch.png"
+date: 4 January 2024
+tags: [creativity, soccer, lsa, nlp, dimension reduction, svd]
 ---
 
-<!--#   ![image]({{ page.img | relative_url }}) -->
+{% include alerts/danger.html content="**Work in Progress**<br/>This notebook is currently being revised. An update will be available soon." %}
 
-{% include Cluster_Analysis_Goals.html %}
+
+{% include empty_nb.html %}
