@@ -55,6 +55,8 @@
 
 <div class="portfolio-grid">
     {% for item in site.portfolio %}
+    {% if item.hide != true %}
+    
     <div class="portfolio-cell">
         <a class="portfolio-link" data-keyboard="true" href="{{ item.url | relative_url }}">
             <!-- Image and Title Container -->
@@ -65,6 +67,7 @@
             </div>
         </a>
     </div>
+    {% endif %}
     {% endfor %}
 </div>
 
