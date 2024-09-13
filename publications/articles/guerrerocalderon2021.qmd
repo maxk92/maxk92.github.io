@@ -1,0 +1,24 @@
+---
+title: How does the workload applied during the training week and the contextual factors affect the physical responses of professional soccer players in the match?
+author:
+  - name: Berni Guerrero-Calderón
+  - name: Maximilian Klemp
+    orcid: 0000-0003-4466-8136
+  - name: José Alfonso Morcillo
+  - name: Daniel Memmert
+publication: International Journal of Sports Science & Coaching
+year: 2021
+doi: https://doi.org/10.1177/1747954121995610
+image: ../pub-images/guerrerocalderon2020_small.png
+toc: false
+---
+
+## Abstract
+
+The aim of this study was to examine whether match physical output can be predicted from the workload applied in training by professional soccer players. Training and match load records from two professional soccer teams belonging to the Spanish First and Second Division were collected through GPS technology over a season (N ¼ 1678 and N ¼ 2441 records, respectively). The factors playing position, season period, quality of opposition, category and playing formation were considered into the analysis. The level of significance was set at p .05. The prediction models yielded a conditional R-squared in match of 0.51 in total distance (TD); 0.58 in high-intensity distance (HIRD, from 14 to 24 $km \cdot  h^{-1}$); and 0.60 in sprint distance (SPD, >24 $km \cdot  h^{-1}$). The main finding of this study was that the physical output of players in the match was predicted from the training-load performed during the previous training week. The training-TD negatively affected the match physical output while the training-HIRD showed a positive effect. Moreover, the contextual factors – playing position, season period, division and quality of opposition – affected the players’ physical output in the match. Therefore, these results suggest the appropriateness of programming lower training volume but increasing the intensity of the activity throughout the weekly microcycle, and considering contextual factors within the load programming.
+
+## Downloads
+
+[BibTeX](download/guerrerocalderon2020.bib)
+[PDF](download/guerrerocalderon2020.pdf)
+

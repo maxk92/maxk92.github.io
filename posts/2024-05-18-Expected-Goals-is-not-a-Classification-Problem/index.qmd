@@ -1,0 +1,26 @@
+---
+title: "Expected Goals is not a Classification Problem!"
+description: "A critical comment on the evaluation of xG models using traditional Machine Learning approaches."
+author:
+  - name: Maximilian Klemp
+    orcid: 0000-0003-4466-8136
+date: 2024-05-18
+format:
+  html:
+    embed-resources: true
+image: xg1.png
+categories: [machine learning, soccer]
+citation: 
+  url: https://maxk92.github.io/posts/2024-05-18-Expected-Goals-is-not-a-Classification-Problem/ 
+bibliography: /home/max/drive/dshs/PhD/phd_library.bib
+title-block-banner: pitch.png
+draft: false
+---
+
+Barely a metric from the Football Analytics realm has received attention in a similar way as the ***Expected Goals***-metric (xG). Most TV broadcasters include the cumulative xG values of both teams at half and full-time. Coaches and pundits alike comment on the xG values, attempting to attribute unfavorable results to **bad luck** rather than to **bad skill**. The widespread use of xG in TV shows, on websites, and in locker rooms brings the need for reliable and trustworthy xG models. Only if they draw a better picture of how a match unfolded than "raw" goals they will be embraced by the professional football community. Case studies that successfully use the xG metric for real-world problems build trust in the method. For example, ***Expected Goals*** form a valid basis for judging coach dismissals [@flepp2020] and enable better predictions of future results than goals [@mead2023]. But besides proving the general validity of the xG construct, it is imperative to create models that produce reliable estimates of scoring probabilities.
+
+This challenge is essentially a mathematical one and since ***Expected*** ***Goals*** models are almost exclusively built using Supervised Machine Learning algorithms, it seems straightforward to adopt time-tested approaches from Machine Learning to evaluate the models. **However, this is exactly the mistake that this post is meant to expose** and we will see in a minute why it is **not a good idea** to view ***Expected Goals*** as a **Classification Problem.**
+
+*Short description of classification algorithms and example of perfect separation on the xg problem*
+
+*short description of classification evaluation metrics*

@@ -1,0 +1,23 @@
+---
+title: Individual attention capacity enhances in-field group performances in soccer
+author:
+  - name: Daniel Memmert
+  - name: Maximilian Klemp
+    orcid: 0000-0003-4466-8136
+  - name: Sebastian Schwab
+  - name: Benedict Low
+publication: International Journal of Sport and Exercise Psychology
+year: 2023
+doi: https://doi.org/10.1080/1612197x.2023.2204364
+image: ../pub-images/memmert2023_small.png
+toc: false
+---
+
+## Abstract
+
+Visual attention capacity impacts performance in different laboratory and real-world tasks positively. The present field-study extends for the first time performance gains from individuals to team performance. Our study examined the attention capacity of 88 soccer players to create low vs. high attention capacity teams (LACT vs. HACT) who competed in a controlled field-study. Positional data were gathered using player tracking systems (1 Hz) in a standardised 11 vs. 11 soccer game. Key performance indicators (KPIs), which have been established in match analysis research, were measured to reflect tactical performance of the teams. As predicted from attention frameworks, HACT outperformed LACT in five out of seven KPIs, suggesting that attention capacity might play a crucial role for/in searching and gathering important space on the pitch. These findings provide evidence for attention being a predictor of team success. Practice task designs with an emphasis on attention capacity therefore could be a useful tool to study the emergent behavioural dynamics in a real-world environment.
+
+## Downloads
+
+[BibTeX](download/memmert2023.bib)
+[PDF](download/memmert2023.pdf)

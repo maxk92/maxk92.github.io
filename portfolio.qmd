@@ -1,0 +1,13 @@
+---
+title : "Project Portfolio"
+listing:
+  contents: notebooks
+  fields: [image, date, description, title, author, word-count, categories]
+  type: grid
+  image-placeholder: portfolio_img/terminator_pitch.png
+  sort: "date desc"
+  categories: numbered
+---
+
+This page displays an overview of the projects I have been working on in the past.
+

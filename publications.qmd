@@ -1,0 +1,228 @@
+---
+title: "Publications"
+format:
+  html:
+    fontsize: 0.65em
+    grid: 
+      body-width: 600px
+bibliography: /home/max/drive/dshs/PhD/phd_library.bib
+---
+
+## Peer-reviewed Articles
+
+### 2023
+  
+::: columns
+::: {.column width="17%" vertical-align="middle"}
+[![](publications/pub-images/klemp2023_small.png){fig-align="left" height="100"}](https://doi.org/10.1007/978-3-031-31772-9_23)
+:::
+
+::: {.column width="83%"}
+##### **Analyzing Collapsibility in Performance Analysis in Sports**
+
+**Maximilian Klemp** and Robert Rein and Daniel Memmert\
+
+*13*<sup>th</sup> World Congress of Performance Analysis of Sport and 13<sup>th</sup> International Symposium on Computer Science in Sport, 2023
+
+[{{< bi filetype-pdf size=12px >}} PDF](publications/download/klemp2023.pdf){style="text-decoration:none"}     [{{< bi file-earmark-text size=12px >}} BibTeX](publications/download/klemp2023.bib){style="text-decoration:none"}     [{{< bi box-arrow-up-right size=12px >}} DOI](https://doi.org/10.1007/978-3-031-31772-9_23){style="text-decoration:none"}
+:::  
+:::
+
+------------------------------------------------------------------------
+
+::: columns
+::: {.column width="17%" vertical-align="middle"}
+[![](publications/pub-images/memmert2023_small.png){fig-align="left" height="100"}](https://doi.org/10.1080/1612197x.2023.2204364)
+:::
+
+::: {.column width="83%"}
+##### **Individual attention capacity enhances in-field group performances in soccer**
+
+Daniel Memmert and **Maximilian Klemp** and Sebastian Schwab and Benedict Low  
+  
+*International Journal of Sport and Exercise Psychology, 2023*
+
+[{{< bi filetype-pdf size=12px >}} PDF](publications/download/memmert2023.pdf){style="text-decoration:none"}     [{{< bi file-earmark-text size=12px >}} BibTeX](publications/download/memmert2023.bib){style="text-decoration:none"}     [{{< bi box-arrow-up-right size=12px >}} DOI](https://doi.org/10.1080/1612197x.2023.2204364){style="text-decoration:none"}
+:::
+:::
+
+***
+
+### 2022
+
+***
+
+### 2021
+
+::: columns
+::: {.column width="17%" vertical-align="middle"}
+[![](publications/pub-images/brinkschulte2021_small.png){fig-align="left" height="100"}](https://doi.org/10.1038/s41598-021-04118-6)
+:::
+
+::: {.column width="83%"}
+##### **English goalkeepers are not responsible for England's poor performance in penalty shootouts in the past**  
+  
+Michel Brinkschulte and Philip Furley and **Maximilian Klemp** and Daniel Memmert  
+  
+*Scientific Reports, 2021*
+
+[{{< bi filetype-pdf size=12px >}} PDF](publications/download/brinkschulte2021.pdf){style="text-decoration:none"}     [{{< bi file-earmark-text size=12px >}} BibTeX](publications/download/brinkschulte2021.bib){style="text-decoration:none"}     [{{< bi box-arrow-up-right size=12px >}} DOI](https://doi.org/10.1038/s41598-021-04118-6){style="text-decoration:none"}
+:::  
+:::
+
+***
+
+::: columns
+::: {.column width="17%" vertical-align="middle"}
+[![](publications/pub-images/klemp2021_small.png){fig-align="left" height="100"}](https://doi.org/10.1177/17479541211035382)
+:::
+
+::: {.column width="83%"}
+##### **The influence of running performance on scoring the first goal in a soccer match**  
+  
+**Maximilian Klemp** and Daniel Memmert and Robert Rein  
+  
+*International Journal of Sports Science & Coaching, 2021*
+
+[{{< bi filetype-pdf size=12px >}} PDF](publications/download/klemp2021.pdf){style="text-decoration:none"}     [{{< bi file-earmark-text size=12px >}} BibTeX](publications/download/klemp2021.bib){style="text-decoration:none"}     [{{< bi box-arrow-up-right size=12px >}} DOI](https://doi.org/10.1177/17479541211035382){style="text-decoration:none"}
+:::  
+:::
+
+***
+
+::: columns
+::: {.column width="17%" vertical-align="middle"}
+[![](publications/pub-images/klemp2021b_small.png){fig-align="left" height="100"}](https://doi.org/10.1038/s41598-021-03157-3)
+:::
+
+::: {.column width="83%"}
+##### **In-play forecasting in football using event and positional data**  
+  
+**Maximilian Klemp** and Fabian Wunderlich and Daniel Memmert
+  
+*Scientific Reports, 2021*
+
+[{{< bi filetype-pdf size=12px >}} PDF](publications/download/klemp2021b.pdf){style="text-decoration:none"}     [{{< bi file-earmark-text size=12px >}} BibTeX](publications/download/klemp2021b.bib){style="text-decoration:none"}     [{{< bi box-arrow-up-right size=12px >}} DOI](https://doi.org/10.1038/s41598-021-03157-3){style="text-decoration:none"}
+:::  
+:::
+
+***
+
+::: columns
+::: {.column width="17%" vertical-align="middle"}
+[![](publications/pub-images/guerrerocalderon2021_small.png){fig-align="left" height="100"}](https://doi.org/10.1177/1747954121995610)
+:::
+
+::: {.column width="83%"}
+##### **How does the workload applied during the training week and the contextual factors affect the physical responses of professional soccer players in the match?**    
+  
+Berni Guerrero-Calderón and **Maximilian Klemp** and José Alfonso Morcillo and Daniel Memmert
+
+*International Journal of Sports Science & Coaching, 2021*
+
+[{{< bi filetype-pdf size=12px >}} PDF](publications/download/guerrerocalderon2021.pdf){style="text-decoration:none"}     [{{< bi file-earmark-text size=12px >}} BibTeX](publications/download/guerrerocalderon2021.bib){style="text-decoration:none"}     [{{< bi box-arrow-up-right size=12px >}} DOI](https://doi.org/10.1177/1747954121995610){style="text-decoration:none"}
+:::  
+:::
+
+***
+
+### 2020
+  
+::: columns
+::: {.column width="17%" vertical-align="middle"}
+[![](publications/pub-images/guerrerocalderon2020_small.png){fig-align="left" height="100"}](https://doi.org/10.1055/a-1289-9059)
+:::
+
+::: {.column width="83%"}
+##### **A New Approach for Training-load Quantification in Elite-level Soccer: Contextual Factors**      
+  
+Berni Guerrero-Calderón and **Maximilian Klemp** and Alfonso Castillo-Rodriguez and José Alfonso Morcillo and Daniel Memmert
+
+*International Journal of Sports Medicine, 2020*
+
+[{{< bi filetype-pdf size=12px >}} PDF](publications/download/guerrerocalderon2020.pdf){style="text-decoration:none"}     [{{< bi file-earmark-text size=12px >}} BibTeX](publications/download/guerrerocalderon2020.bib){style="text-decoration:none"}     [{{< bi box-arrow-up-right size=12px >}} DOI](https://doi.org/10.1055/a-1289-9059){style="text-decoration:none"}
+:::  
+:::
+
+------------------------------------------------------------------------
+
+## Book Chapters
+
+### 2024
+
+::: columns
+::: {.column width="17%" vertical-align="middle"}
+[![](publications/pub-images/klemp2024_small.png){fig-align="left" height="100"}](https://doi.org/10.1007/978-3-662-68313-2_15)
+:::
+
+::: {.column width="83%"}
+##### **Python**      
+  
+**Maximilian Klemp**
+
+*In Memmert, D.: Computer Science in Sports, 2024*
+
+[{{< bi file-earmark-text size=12px >}} BibTeX](publications/download/klemp2024.bib){style="text-decoration:none"}     [{{< bi box-arrow-up-right size=12px >}} DOI](https://doi.org/10.1007/978-3-662-68313-2_15){style="text-decoration:none"}
+:::  
+:::
+
+***
+
+### 2023
+
+::: columns
+::: {.column width="17%" vertical-align="middle"}
+[![](publications/pub-images/klemp2023b){fig-align="left" height="100"}](https://doi.org/10.1007/978-3-662-67026-2_15)
+:::
+
+::: {.column width="83%"}
+##### **Python**      
+  
+**Maximilian Klemp**
+
+*In Memmert, D.: Sportinformatik, 2023*
+
+[{{< bi file-earmark-text size=12px >}} BibTeX](publications/download/klemp2023b.bib){style="text-decoration:none"}     [{{< bi box-arrow-up-right size=12px >}} DOI](https://doi.org/10.1007/978-3-662-67026-2_15){style="text-decoration:none"}
+:::  
+:::
+
+***
+
+### 2022
+
+::: columns
+::: {.column width="17%" vertical-align="middle"}
+[![](publications/pub-images/klemp2022){fig-align="left" height="100"}](https://doi.org/10.1007/978-3-662-63444-8_24)
+:::
+
+::: {.column width="83%"}
+##### **Physische KPIs**      
+  
+**Maximilian Klemp**
+
+*In Memmert, D.: Spielanalyse im Sportspiel, 2022*
+
+[{{< bi file-earmark-text size=12px >}} BibTeX](publications/download/klemp2022.bib){style="text-decoration:none"}     [{{< bi box-arrow-up-right size=12px >}} DOI](https://doi.org/10.1007/978-3-662-63444-8_24){style="text-decoration:none"}
+:::  
+:::
+
+***
+
+### 2021
+
+::: columns
+::: {.column width="17%" vertical-align="middle"}
+[![](publications/pub-images/klemp2021c){fig-align="left" height="100"}](https://doi.org/10.4324/9781003160953-304)
+:::
+
+::: {.column width="83%"}
+##### **Physical KPIs**      
+  
+**Maximilian Klemp**
+
+*In Memmert, D.: Match Analysis, 2021*
+
+[{{< bi file-earmark-text size=12px >}} BibTeX](publications/download/klemp2021c.bib){style="text-decoration:none"}     [{{< bi box-arrow-up-right size=12px >}} DOI](https://doi.org/10.4324/9781003160953-30){style="text-decoration:none"}
+
+:::
+:::

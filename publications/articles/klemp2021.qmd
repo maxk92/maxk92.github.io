@@ -1,0 +1,18 @@
+---
+title: The influence of running performance on scoring the first goal in a soccer match
+author:
+  - name: Maximilian Klemp
+    orcid: 0000-0003-4466-8136
+  - name: Daniel Memmert
+  - name: Robert Rein
+publication: International Journal of Sports Science & Coaching
+year: 2021
+doi: https://doi.org/10.1177/17479541211035382
+image: ../pub-images/klemp2021_small.png
+toc: false
+---
+
+Previous studies investigating running distance in high performance soccer have led to contradictory evidence, potentially due to ignoring contextual information during match phases. The present study therefore examined the relationship between running performance and goal scoring in a football match for a standardised score line. In a sample of 302 matches from the first German Bundesliga, the first goal was modelled as a function of the teams’ running performance and team strength using logistic regression. Goodness of fit was assessed by the prediction accuracy of the model utilising cross-validation. The best model showed a mean accuracy of 77%, reflecting a strong relationship between running performance and the probability of scoring the first goal. This relationship was strongest for total running distance compared to high-speed, sprint or in-possession running distance. We propose two different potential mechanisms to explain the relationship between running performance and goal-scoring found in the present study. These are (1) better ability to reach tactical aims or (2) accumulation of fatigue in the opponent. Future studies should build on these results by further examining the relationship between running performance and success using a more granular segmentation of matches.
+
+[BibTeX](download/klemp2021.bib)  
+[PDF](download/klemp2021.pdf)

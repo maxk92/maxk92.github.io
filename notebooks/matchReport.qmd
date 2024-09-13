@@ -1,0 +1,347 @@
+---
+title: "Building Soccer Match Reports"
+author: "Maximilian Klemp"
+date: 2023-10-21
+categories: [R, quarto, plotting, soccer]
+image: portfolio_img/terminator_closeup.png
+format:
+  html:
+    embed-resources: true
+    code_folde: true
+  pdf: default
+execute: 
+  eval: true
+  warning: false
+  echo: false
+highlight-style: nord
+abstract: |
+  A Match Report of the final of the Women's World Cup in Soccer in 2023, based on free StatsBomb event data.
+params:
+  match_id: 3906390
+---
+
+Credit: event data provided by StatsBomb.
+
+```{r}
+#| message: false
+#| warning: false
+#| results: hide
+library(knitr)
+library(tidyverse)
+library(StatsBombR)
+library(ggsoccer)
+library(cividis)
+
+## Get dataframe of available competitions
+free_competitions <- FreeCompetitions()
+
+## Get dataframe of available matches for Women's World Cup (competition_id == 72) in 2023 (season_id == 107)
+free_matches_worldcup <- free_competitions %>%
+  filter((competition_id == 72) & (season_id == 107)) %>%
+  FreeMatches()
+
+world_cup_final <- free_matches_worldcup %>%
+  filter(match_id == params$match_id) %>%
+  mutate(
+    home_name = gsub(" Women's", "", home_team.home_team_name),
+    away_name = gsub(" Women's", "", away_team.away_team_name)
+  )
+
+home_team_name = world_cup_final$home_name
+away_team_name = world_cup_final$away_name
+
+world_cup_final_events <- get.matchFree(world_cup_final) %>%
+  allclean() %>%
+  mutate(period_name = factor(period, levels=c(1,2,3,4,5),
+                              labels = c("FirstHalf", "SecondHalf", "OvertimeFirst", "OvertimeSecond", "Penalties")),
+         period_macro = ifelse(period < 5, "Match", "Penalties"),
+         team_name = gsub(" Women's", "", team.name),
+         possession_team_name = gsub(" Women's", "", possession_team.name)
+         )
+```
+
+```{r}
+match_score <- world_cup_final_events %>%
+  group_by(
+    team_name, period_macro
+  ) %>%
+  summarise(
+    goals = sum(shot.outcome.name == "Goal", na.rm = T) + sum(type.name == "Own Goal For")
+  ) %>%
+  mutate(
+    h_a = ifelse(team_name == home_team_name, "home", "away")
+  ) %>%
+  pivot_wider(values_from = c(goals, team_name), names_from = h_a)
+
+
+if ("Penalties" %in% match_score$period_macro) {
+  match_result_string <- paste(
+    paste(match_score$team_name_home, match_score$goals_home, '-', match_score$goals_away, match_score$team_name_away),
+    paste('Penalties: (', match_score$goals_home, '-', match_score$goals_away, match_score$team_name_away, ')'), 
+    sep="\n")
+} else {
+  match_result_string <- paste(match_score$team_name_home, match_score$goals_home, '-', match_score$goals_away, match_score$team_name_away)
+}
+
+```
+
+## Match Info
+
+The **`r world_cup_final$competition_stage.name`** of the **`r world_cup_final$competition.competition_name`** **`r world_cup_final$season.season_name`** took place on **`r world_cup_final$match_date`** at **`r format(strptime(world_cup_final$kick_off, '%H:%M:%S'), '%H:%M')`**. In the match, **`r world_cup_final$home_name`** was competing against **`r world_cup_final$away_name`**.
+
+## Match Result
+
+**`r match_result_string`**
+
+## Line-Ups
+
+Line-Ups based on the average position of actions performed by each player.
+
+#### Home Team
+
+```{r}
+#| fig-height: 7
+#| fig-width: 7
+#| echo: true
+
+## Home Team Lineup Map
+world_cup_final_events %>%
+  filter(team_name == home_team_name) %>%
+  group_by(player.name) %>%
+  summarise(
+    position.name = first(position.name),
+    mean_pos_x = mean(location.x, na.rm = T),
+    mean_pos_y = mean(location.y, na.rm = T),
+    n_actions = n()
+  ) %>%
+  mutate(
+    player_name = gsub("  ", " ", player.name),
+    player_name_lbreak = gsub(" ", "\n", player_name)
+  ) %>%
+  ggplot() +
+  annotate_pitch(dimensions = pitch_statsbomb, fill = "darkgreen", colour = "white") +
+   geom_label(aes(x=mean_pos_x+3, y=mean_pos_y, label = player_name), hjust = "center", size = 3, fill = "darksalmon") +
+  geom_point(aes(x=mean_pos_x, y=mean_pos_y, size = n_actions), col = "black",  fill = "red", shape = 21)  +
+  scale_size_continuous(range = c(2,10)) +
+  coord_flip()
+```
+
+#### Away Team
+
+```{r}
+#| fig-height: 7
+#| fig-width: 7
+
+## Away Team Lineup Map
+world_cup_final_events %>%
+  filter(team_name == away_team_name) %>%
+  group_by(player.name) %>%
+  summarise(
+    position.name = first(position.name),
+    mean_pos_x = mean(location.x, na.rm = T),
+    mean_pos_y = mean(location.y, na.rm = T),
+    n_actions = n()
+  ) %>%
+  mutate(
+    player_name = gsub("  ", " ", player.name),
+    player_name_lbreak = gsub(" ", "\n", player_name)
+  ) %>%
+  ggplot() +
+  annotate_pitch(dimensions = pitch_statsbomb, fill = "darkgreen", colour = "white") +
+   geom_label(aes(x=mean_pos_x+3, y=mean_pos_y, label = player_name), size = 3, fill = "cyan") +
+  geom_point(aes(x=mean_pos_x, y=mean_pos_y, size = n_actions), col = "black",  fill = "blue", shape = 21) +
+  scale_size_continuous(range = c(2,10)) +
+  coord_flip()
+```
+
+------------------------------------------------------------------------
+
+## Pass map home team
+
+Density map of the passing positions per team.
+
+```{r}
+#| echo: true
+
+world_cup_final_events %>%
+  filter(type.name == "Pass",
+         team_name == home_team_name) %>%
+  mutate(
+    location_x_rounded = round(location.x),
+    location_y_rounded = round(location.y)
+  ) %>%
+  ggplot(aes(x=location_x_rounded, y=location_y_rounded)) +
+  annotate_pitch(dimensions = pitch_statsbomb, fill = "darkgreen", colour = "white") +
+  geom_bin_2d(binwidth = c(10,10), drop = FALSE, alpha = .81, col = "black") +
+  scale_fill_cividis()
+```
+
+## Pass map away team
+
+```{r}
+world_cup_final_events %>%
+  filter(type.name == "Pass",
+         team_name == away_team_name) %>%
+  mutate(
+    location_x_rounded = round(location.x),
+    location_y_rounded = round(location.y)
+  ) %>%
+  ggplot(aes(x=location_x_rounded, y=location_y_rounded)) +
+  annotate_pitch(dimensions = pitch_statsbomb, fill = "darkgreen", colour = "white") +
+  geom_bin_2d(binwidth = c(10,10), drop = FALSE, alpha = .81, col = "black") +
+  scale_fill_cividis()
+```
+
+------------------------------------------------------------------------
+
+## Time evolution
+
+Evolution of the cumulated number of shots over the match per team. Goals are indicated by vertical lines
+
+```{r}
+#| echo: true
+
+goal_subset <- world_cup_final_events %>%
+  filter((shot.outcome.name == "Goal") | (type.name == "Own Goal For"))
+
+world_cup_final_events %>%
+  group_by(team_name) %>%
+  mutate(
+    cum_shots = cumsum(type.name == "Shot")
+  ) %>%
+  ggplot() +
+  geom_line(aes(x=minute, y=cum_shots, col = team_name)) +
+  geom_vline(data = goal_subset, aes(xintercept = minute, color = team_name)) +
+  geom_label(data = goal_subset, aes(x = minute, y = 10, label = paste("Goal For ",team_name)), size = 3, fill = "lightgrey") +
+  xlab("Playing minute") +
+  ylab("Cumulated number of shots") +
+  scale_color_cividis(discrete = T) +
+  theme_dark()
+
+```
+
+------------------------------------------------------------------------
+
+## Most impactful players
+
+```{r}
+player_stats <- world_cup_final_events %>%
+  group_by(team_name, player.name) %>%
+  mutate(
+    carry_distance = sqrt((location.y - carry.end_location.y)**2 + (location.x - carry.end_location.x)**2) 
+  ) %>% 
+  summarise(
+    n_actions = n(),
+    total_pass_length = round(sum(pass.length, na.rm = T), 1),
+    n_passes = sum(type.name == "Pass", na.rm = T),
+    n_shots = sum(type.name == "Shot", na.rm = T),
+    n_pressures = sum(type.name == "Pressure", na.rm = T),
+    n_counterpress = sum(counterpress == TRUE, na.rm = T),
+    n_dribbles = sum(type.name == "Dribble"),
+    n_successful_dribbles = sum(dribble.outcome.name == "Complete", na.rm = T),
+    total_carry_dist = round(sum(carry_distance, na.rm = T), 1),
+    n_tackles = sum(type.name == "Tackle")
+  )
+```
+
+#### Number of actions
+
+```{r}
+#| label: tbl-n-actions
+#| tbl-cap: "Top 5 players per team with respect to number of actions"
+#| layout-ncol: 2
+
+home_n_actions <- player_stats %>%
+  filter(team_name == home_team_name) %>%
+  arrange(desc(n_actions)) %>%
+  select(player.name, n_actions) %>%
+  head(5)
+
+away_n_actions <- player_stats %>%
+  filter(team_name == away_team_name) %>%
+  arrange(desc(n_actions)) %>%
+  select(player.name, n_actions) %>%
+  head(5)
+
+kable(home_n_actions, caption = home_team_name)
+kable(away_n_actions, caption = away_team_name)
+```
+
+#### Passing distance
+
+```{r}
+#| label: tbl-pass-dist
+#| tbl-cap: "Top 5 players per team with respect to passing distance"
+#| layout-ncol: 2
+
+home_pass_dist <- player_stats %>%
+  filter(team_name == home_team_name) %>%
+  arrange(desc(total_pass_length)) %>%
+  select(player.name, total_pass_length) %>%
+  head(5)
+
+away_pass_dist <- player_stats %>%
+  filter(team_name == away_team_name) %>%
+  arrange(desc(total_pass_length)) %>%
+  select(player.name, total_pass_length) %>%
+  head(5)
+
+kable(home_pass_dist, caption = home_team_name)
+kable(away_pass_dist, caption = away_team_name)
+```
+
+#### Carry distance
+
+```{r}
+#| label: tbl-carry-dist
+#| tbl-cap: "Top 5 players per team with respect to carry distance"
+#| layout-ncol: 2
+
+home_carry_dist <- player_stats %>%
+  filter(team_name == home_team_name) %>%
+  arrange(desc(total_carry_dist)) %>%
+  select(player.name, total_carry_dist) %>%
+  head(5)
+
+away_carry_dist <- player_stats %>%
+  filter(team_name == away_team_name) %>%
+  arrange(desc(total_carry_dist)) %>%
+  select(player.name, total_carry_dist) %>%
+  head(5)
+
+kable(home_carry_dist, caption = home_team_name)
+kable(away_carry_dist, caption = away_team_name)
+```
+
+------------------------------------------------------------------------
+
+## Turnovers
+
+A map showing the distribution of turnover locations for both teams.
+
+```{r}
+#| fig-width: 15
+#| fig-height: 13
+#| echo: true 
+
+world_cup_final_events %>%
+  arrange(minute, second) %>%
+  group_by(possession) %>%
+  summarise(
+    team = first(team_name),
+    duration = sum(duration, na.rm = T),
+    first_action = first(type.name),
+    last_action = last(type.name),
+    last_x = last(location.x),
+    last_y = last(location.y)
+  ) %>%
+  ggplot(aes(x=last_x, y=last_y)) +
+    annotate_pitch(dimensions = pitch_statsbomb, fill = "darkgreen", colour = "white") +
+    
+  geom_density_2d_filled(alpha = .9) +
+  geom_point(aes(), size = 2, alpha=.6) +
+    facet_grid(team~.) +
+  scale_fill_cividis(discrete = T) +
+       theme(strip.text.y = element_text(size = 20))
+
+```

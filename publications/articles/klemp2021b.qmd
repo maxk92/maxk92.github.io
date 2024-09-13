@@ -1,0 +1,22 @@
+---
+title: In-play forecasting in football using event and positional data
+author:
+  - name: Maximilian Klemp
+    orcid: 0000-0003-4466-8136
+  - name: Fabian Wunderlich
+  - name: Daniel Memmert
+publication: Scientific Reports
+year: 2021
+doi: https://doi.org/10.1038/s41598-021-03157-3
+image: ../pub-images/klemp2021b_small.png
+toc: false
+---
+
+## Abstract
+
+Two highly relevant aspects of football, namely forecasting of results and performance analysis by means of performance indicators, are combined in the present study by analysing the value of in-play information in terms of event and positional data in forecasting the further course of football matches. Event and positional data from 50 matches, including more than 300 million datapoints were used to extract a total of 18 performance indicators. Moreover, goals from more than 30,000 additional matches have been analysed. Results suggest that surprisingly goals do not possess any relevant informative value on the further course of a match, if controlling for pre-game market expectation by means of betting odds. Performance indicators based on event and positional data have been shown to possess more informative value than goals, but still are not sufcient to reveal signifcant predictive value in-play. The present results are relevant to match analysts and bookmakers who should not overestimate the value of in-play information when explaining match performance or compiling in-play betting odds. Moreover, the framework presented in the present study has methodological implications for performance analysis in football, as it suggests that researchers should increasingly segment matches by scoreline and control carefully for general team strength.
+
+## Downloads
+
+[BibTeX](download/klemp2021b.bib)
+[PDF](download/klemp2021b.pdf)

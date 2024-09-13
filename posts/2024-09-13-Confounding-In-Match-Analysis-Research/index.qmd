@@ -1,0 +1,30 @@
+---
+title: "Confounding in Match Analysis Research"
+description: "Read more..."
+author:
+  - name: Maximilian Klemp
+    orcid: 0000-0003-4466-8136
+date: 2024-09-13
+format:
+  html:
+    embed-resources: true
+image: greenland1999b_fig1.png
+categories: [statistics, soccer]
+citation: 
+  url: https://maxk92.github.io/posts/2024-09-13-Confounding-In-Match-Analysis-Research/ 
+bibliography: /home/max/drive/dshs/PhD/phd_library.bib
+title-block-banner: pitch.png
+draft: false
+---
+
+The problem of *confounding* refers to the case in which an observed association between variables is *confounded* for (i.e. confused with) the actual causal effect of interest [@greenland1999]. If the observed association is biased by systematic differences between samples or an unobserved covariate, the confounding problem leads to false inferences. If the observed association is unbiased and (approximately) equals the effect under investigation, no confounding is present.
+One of the earliest mentions of the term confounding can be found in the work by John Stuart Mill [@mill1843]. He states a requirement for an experiment to enable causal inferences:
+
+> “. . . none of the **circumstances** [of the experiment] that we do know shall have effects susceptible of being **confounded with those of the agents** whose properties we wish to study.”
+
+This definition, which has been followed by most modern literature [@greenland2001], states that confounding emerges due to effects of certain study characteristics that have not been accounted for. Translating this definition to the case of *Match Analysis Research*, the problem of confounding would mean that the observed association between a *Performance Indicator* of interest and a *Success Indicator* would be biased by a circumstance of the study, more specifically a *Contextual Factor* that has not been accounted for. This biased association would then be *confounded* for the actual effect of the *Performance Indicator* on the *Success Indicator* (for a detailed discussion of confounding, see [@greenland1999]).
+With respect to the mathematical formalization of the problem, a distinction has to be made between counterfactual and collapsibility-based concepts of confounding [@greenland2001]. While the former emerges due to differences between the populations under comparison, the latter is caused by an unaccounted covariate and, therefore, reflects the scenario present in studies of *Match Analysis Research*.
+Specifically, *collapsibility* is a term to describe an association between variables and the effect of a potential covariate on this association. A measure of association between $X$ and $Y$ is said to be strictly *collapsible* across $Z$ if it is constant across all strata (subgroups) defined by $Z$ and if this constant value equals the value obtained from the marginal table (i.e., ignoring $Z$) [@whittemore1978]; [@greenland1999]. For the *MAR* setting, $X$ would correspond to a given *Performance Indicator*, $Y$ would correspond to a *Success Indicator* and $Z$ would correspond to any *Contextual Factor*. Within this application, the relationship between *Performance Indicator* $X$ and *Success Indicator* $Z$ would be collapsible across *Contextual Factor* $Z$ if the association between $X$ and $Y$ would be constant across all levels of $Z$ and this association would be equal to the association between $X$ and $Y$ when ignoring $Z$ (i.e. the marginal association between $X$ and $Y$). A violation of this condition leads to *noncollapsibility* of the respective measure of association across the respective covariate $Z$.
+The most important implication of *noncollapsibility* is that it renders the marginal association between $X$ and $Y$ biased and requires conditioning on $Z$ (or alternatively, the inclusion of $Z$ as a covariate in the analysis). Identification of *noncollapsibility* is therefore crucial to determine the set of included covariates.
+Confounding of the association between $X$ and $Y$ due to *noncollapsibility* occurs if a covariate $Z$ has an effect on both $X$ and $Y$, a scenario depicted in the causal diagram in Fig. **TODO**. Graph theory shows that a common cause $Z$ will create an association between its effects $X$ and $Y$ [[@pearl1995]]. Therefore, the observed association between $X$ and $Y$ will consist of two separate effects: the actual association between $X$ and $Y$, independent from $Z$ and the one introduced by the confounding effect of $Z$. If the effect introduced through confounding is of the opposite direction and of sufficient magnitude, it might reverse the actual association, as is the case in the famous example of Simpson’s paradox ([@simpson1951]; for an explanation in the light of confounding, see [@hernan2011]). 
+Applying these considerations to the *MAR* setting, it can be stated that a *Contextual Factor* $Z$ possesses the potential to *confound* the association between a *Performance Indicator* $X$ and a *Success Indicator* $Y$ if it affects both $X$ and $Y$ and the association between $X$ and $Y$ is found to be *noncollapsible* across levels of $Z$. 

@@ -1,0 +1,31 @@
+{
+    "id": "ECEDCD5C",
+    "path": "~/drive/coding/projects/P___website/quarto_website/portfolio.qmd",
+    "project_path": "portfolio.qmd",
+    "type": "markdown",
+    "hash": "3952082685",
+    "contents": "",
+    "dirty": false,
+    "created": 1716111373984.0,
+    "source_on_save": false,
+    "relative_order": 3,
+    "properties": {
+        "rmdVisualMode": "false",
+        "rmdVisualWrapConfigured": "true",
+        "source_window_id": "",
+        "Source": "Source",
+        "docOutlineVisible": "0",
+        "rmdVisualCollapsedChunks": "",
+        "cursorPosition": "6,3",
+        "scrollLine": "0",
+        "rmdVisualModeLocation": "244:253.6363525390625"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1716123240,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1716123240517,
+    "read_only": false,
+    "read_only_alternatives": []
+}

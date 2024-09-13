@@ -1,0 +1,12 @@
+## Instructions for Publishing
+
+When making changes (e.g. new blog post), do:
+1) "quarto render" in root directory of website
+2) git:
+	* git add .
+	* git commit -m 'commit msg'
+	* git push origin main
+3) Github will automatically deploy website from docs/ directory
+
+
+  

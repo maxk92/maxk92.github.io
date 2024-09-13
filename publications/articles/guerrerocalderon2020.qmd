@@ -1,0 +1,24 @@
+---
+title: "A New Approach for Training-load Quantification in Elite-level Soccer: Contextual Factors"
+author:
+  - name: Berni Guerrero-Calderón
+  - name: Maximilian Klemp
+    orcid: 0000-0003-4466-8136
+  - name: Alfonso Castillo-Rodriguez
+  - name: José Alfonso Morcillo
+  - name: Daniel Memmert
+publication: International Journal of Sports Medicine
+year: 2020
+doi: https://doi.org/10.1055/a-1289-9059
+image: ../pub-images/guerrerocalderon2020_small.png
+toc: false
+---
+
+## Abstract
+
+The aims of this study were to analyse the physical responses of professional soccer players during training considering the contextual factors of match location, season period, and quality of the opposition; and to establish prediction models of physical responses during training sessions. Training data was obtained from 30 professional soccer players from Spanish La Liga using global positioning technology (N = 1365 performances). A decreased workload was showed during training weeks prior to home matches, showing large eff ects in power events, equivalent distance, total distance, walk distance and low-speed running distance. Also, the quality of the opposition also affected the training workload (p < 0.05). All regressionmodels showed moderate eff ects, with an adjusted R2 of 0.37 for metabolic-work, 0.34 for total distance covered, 0.25 for high-speed running distance (18–21 $km \cdot h ^{-1}$), 0.29 for very high-speed running distance (21–24 $km \cdot h ^{-1}$), 0.22 for sprint running distance ( > 24 $km \cdot h ^{-1}$) and 0.34 for equivalent distance. The main fi nding of this study was the great association of match location, season period and quality of opposition on the workload performed by players in the training week before the match; and the development of workload prediction-models considering these contextual factors, thus proposing a new and innovative approach to quantify the workload in soccer. 
+
+## Downloads
+
+[BibTeX](download/guerrerocalderon2020.bib)
+[PDF](download/guerrerocalderon2020.pdf)

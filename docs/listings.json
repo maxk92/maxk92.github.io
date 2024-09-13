@@ -1,0 +1,17 @@
+[
+  {
+    "listing": "/portfolio.html",
+    "items": [
+      "/notebooks/ggplotTutorial.html",
+      "/notebooks/matchReport.html",
+      "/notebooks/clusterGoals.html"
+    ]
+  },
+  {
+    "listing": "/blog.html",
+    "items": [
+      "/posts/2024-09-13-Confounding-In-Match-Analysis-Research/index.html",
+      "/posts/2024-05-18-Expected-Goals-is-not-a-Classification-Problem/index.html"
+    ]
+  }
+]
