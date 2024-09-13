@@ -14,7 +14,7 @@ bibliography: /home/max/drive/dshs/PhD/phd_library.bib
   
 ::: columns
 ::: {.column width="17%" vertical-align="middle"}
-[![](publications/pub-images/klemp2023_small.png){fig-align="center" height="100"}](https://doi.org/10.1007/978-3-031-31772-9_23)
+[![](publications/pub-images/klemp2023_small.png){fig-align="left" height="100"}](https://doi.org/10.1007/978-3-031-31772-9_23)
 :::
 
 ::: {.column width="83%"}
@@ -32,7 +32,7 @@ bibliography: /home/max/drive/dshs/PhD/phd_library.bib
 
 ::: columns
 ::: {.column width="17%" vertical-align="middle"}
-[![](publications/pub-images/memmert2023_small.png){fig-align="right" height="100"}](https://doi.org/10.1080/1612197x.2023.2204364)
+[![](publications/pub-images/memmert2023_small.png){fig-align="left" height="100"}](https://doi.org/10.1080/1612197x.2023.2204364)
 :::
 
 ::: {.column width="83%"}
