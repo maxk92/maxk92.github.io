@@ -1,16 +1,15 @@
 ---
-title: "Posts"
-author: "Max Klemp"
+title: "Blog"
 format: html
 listing:
   contents: posts
   fields: [image, date, description, title, author, word-count, reading-time]
   image-align: left
   type: default
-  image-height: 15em
+  image-height: 12em
   image-placeholder: posts/blog_img/xg1.png
   sort: "date desc"
   categories: cloud
 ---
 
-## Blog
+## Posts

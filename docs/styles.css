@@ -1,1 +1,4 @@
 /* css styles */
+html {
+  zoom: 125%; /* Increase the font size to simulate 125% zoom */
+}
